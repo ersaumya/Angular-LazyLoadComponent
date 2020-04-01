@@ -1,0 +1,8 @@
+<div style="text-align: center;">
+  <h1>{{ title }}</h1>
+  <br />
+  <div style="background-color: grey;">
+    <ng-template *ngIf="lazyCom" [ngComponentOutlet] = "lazyCom | async"></ng-template>
+  </div>
+  <button (click)="load()">Lazy Load</button>
+</div>
